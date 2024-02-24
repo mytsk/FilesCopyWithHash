@@ -4,7 +4,7 @@ A file copy script which copy files from a defined source folder to a target fol
 
 ## Parameters
 | Parameters | Explanation (default values, in bold) |
-| ------ | ------ |
+| --------- | ------ |
 |-SourceFolder | Source folder to copy files from.|
 | -TargetFolder | Destination folder to copy files to.|
 |-OutputFile | Filename of the hash file saved in -TargetFolder|
