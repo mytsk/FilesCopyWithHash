@@ -31,8 +31,8 @@ function Copy-FilesWithHash {
         [Parameter(Mandatory = $false)]
         [string]$OutputFile,
 
-        [Parameter(Mandatory = $true)]
-        [ValidateSet('SHA1', 'SHA256', 'SHA384', 'SHA512')]
+        [Parameter(Mandatory = $false)]
+        [ValidateSet('SHA256', 'SHA384', 'SHA512', 'SHA1', 'MD5')]
         [string]$Algorithm,
 
         [switch]$VerifySource,
@@ -49,6 +49,10 @@ function Copy-FilesWithHash {
     if (!$OutputFile) {
         $OutputFile = "hashes_target.txt"
     }
+    if (!$Algorithm) {
+        $Algorithm = "SHA256"
+    }
+
 
     # Start time for execution
     $startTime = Get-Date
